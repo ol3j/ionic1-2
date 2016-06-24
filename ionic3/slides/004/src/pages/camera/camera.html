@@ -1,0 +1,25 @@
+<ion-navbar *navbar>
+  <ion-title>Camera</ion-title>
+</ion-navbar>
+
+<ion-content padding class="camera">
+  <p>
+      Hello, this is my camera page
+  </p>
+  <ion-card>
+    <ion-card-content>
+      <!--Display image from camera-->
+      <img [src]="base64Image" *ngIf="base64Image" />
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <!--Take a picture-->
+      <button block (click)="takePicture()">Take a Picture</button>
+    </ion-item>
+    <ion-item>
+      <!--Go back button-->
+       <button (click)="goBack()">go back</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

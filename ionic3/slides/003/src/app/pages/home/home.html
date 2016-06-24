@@ -1,0 +1,26 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Ionic1/2 Workshop
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <h1 text-center>What's the date?</h1>
+  <h1 text-center>{{date}}</h1>
+  <ion-list>
+    <ion-item>
+      <button default block (click)="doPrompt()">Click Me</button>
+    </ion-item>
+    <ion-item>
+      <h1 text-center *ngIf="winner">The winner is {{winner}}</h1>
+    </ion-item>
+    <ion-item>
+      <!-- We can add add button with navPush
+        Directive for declaratively linking to a new page instead of using NavController.push.
+        http://ionicframework.com/docs/v2/api/components/nav/NavPush/ -->
+      <button [navPush]="cameraPage">Go To Camera</button>
+      <!-- We can use click action & navigation controller-->
+      <button (click)="goToCamera()">Go To Camera</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

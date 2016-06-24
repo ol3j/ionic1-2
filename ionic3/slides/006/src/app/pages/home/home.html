@@ -1,0 +1,26 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Ionic1/2 Workshop
+  </ion-title>
+</ion-navbar>
+<toolbar>
+  <!--customize view for a platform-->
+  <div showWhen="android">
+    I am visible on Android!
+    </div>
+  <div showWhen="ios">
+    I am visible on iOS!
+  </div>
+</toolbar>
+<ion-content class="home">
+  <ion-list>
+    <ion-item>
+      <!--check platform by action-->
+      <button (click)="checkPlatform()">Check Platform</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<toolbar position="bottom">
+  <!--encapsulte platform service in component-->
+  <my-platform></my-platform>
+</toolbar>
